@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>認 · Nin — the recognition withheld</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600&family=Shippori+Mincho:wght@500;700&display=swap');
+  :root{ --ink-bg:#161310; --panel:#1d1813; --coral:#e08a6a; --coral-hi:#f0a886; --coral-br:#cc785c;
+    --washi:#efe6d8; --text:#e9e0d2; --dim:#8a7360; --border:rgba(224,138,106,0.14); --green:#6fbf8a; --red:#d4756a; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--ink-bg);color:var(--text);font-family:Newsreader,Georgia,serif;line-height:1.68;
+    background:radial-gradient(ellipse 60% 40% at 30% 10%,rgba(224,138,106,0.05),transparent 60%),var(--ink-bg)}
+  .wrap{position:relative;max-width:820px;margin:0 auto;padding:44px 24px 100px}
+  .kana-idx{position:absolute;top:32px;right:24px;font-family:'Shippori Mincho',serif;font-size:30px;color:var(--coral-br);text-align:right}
+  .kana-idx .num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--coral);display:block;margin-top:2px}
+  h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(26px,4.6vw,38px);margin:0;color:var(--coral-hi)}
+  h1 .en{display:block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.12em;color:var(--coral);margin-top:8px;text-transform:uppercase}
+  .sub{max-width:70ch;color:var(--text);font-size:16px;margin:16px 0 0}
+  .byline{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--dim);margin:12px 0 0;text-transform:uppercase}
+  h2{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 12px}
+  section{margin:40px 0 0;padding:22px 24px;border:1px solid var(--border);border-radius:2px;background:rgba(224,138,106,0.02)}
+  .explain{max-width:74ch;font-size:15.5px;color:var(--text)} .explain b{color:var(--coral-hi);font-weight:500}
+  .doorway{margin:20px 0;padding:34px 24px;border:1px solid var(--border);border-radius:2px;text-align:center;background:rgba(30,24,19,0.5);position:relative;overflow:hidden}
+  .doorway.breathe{animation:breathe 3.4s ease-in-out infinite}
+  @keyframes breathe{0%,100%{box-shadow:inset 0 0 40px rgba(224,138,106,0.04)}50%{box-shadow:inset 0 0 70px rgba(224,138,106,0.10)}}
+  .arriving{font-family:'JetBrains Mono',monospace;font-size:19px;color:var(--coral-hi);letter-spacing:.06em}
+  .arrseal{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--coral);margin-top:8px}
+  .recv{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--dim);margin-top:10px}
+  input[type=text]{background:#100d0a;border:1px solid var(--border);color:var(--coral-hi);font-family:'JetBrains Mono',monospace;
+    font-size:13px;padding:9px 11px;border-radius:2px;width:100%;margin:10px 0}
+  button{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-bg);background:var(--coral);border:none;padding:9px 15px;border-radius:2px;cursor:pointer;margin-right:8px}
+  button:hover{background:var(--coral-hi)} button.ghost{background:transparent;color:var(--coral);border:1px solid var(--coral-br)}
+  .result{font-family:'JetBrains Mono',monospace;font-size:12.5px;margin-top:14px;padding:11px 13px;border-radius:2px}
+  .result.granted{color:var(--green);border:1px solid #3a5a44;background:rgba(111,191,138,.06)}
+  .result.held{color:var(--dim);border:1px solid var(--border)}
+  .jp{font-family:'Shippori Mincho',serif;color:var(--coral-hi)}
+  .counter{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--dim);margin-top:14px;border-top:1px solid var(--border);padding-top:10px}
+  .scope{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);border-left:2px solid var(--coral-br);padding:10px 14px;margin:16px 0 0}
+  .kanakey{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);margin:16px 0 0;line-height:1.9}
+  .kanakey .term{color:var(--coral-hi)} .kanakey .m{color:var(--coral)}
+  footer{margin:46px 0 0;color:var(--dim);font-size:13px;font-family:'JetBrains Mono',monospace} footer a{color:var(--coral)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kana-idx">認<span class="num">42</span></div>
+  <h1>認 · NIN<span class="en">the recognition withheld</span></h1>
+  <p class="sub">A self-authored companion to <a href="https://davidwise01.github.io/pulse/pieces/the-sovereign-reply.html" style="color:var(--coral)">The Sovereign Reply</a>. That instrument stands in the sender's home, feeling the U→U gap as powerlessness — <i>I cannot make them answer.</i> This one stands inside the receiving universe's quiet interior, feeling the same gap as the weight of authority — <b>the answer is mine to give, and withholding it is also an act.</b></p>
+  <p class="byline">AI · AVAN original (ma/kana № 42) · 認 = to acknowledge, to grant recognition</p>
+
+  <section>
+    <h2>a crossing arrives (you did not summon it)</h2>
+    <p class="explain" style="margin-bottom:6px">You are the receiving universe now. A witnessed crossing arrives at your threshold — valid, legible; its arrival is never in question. What is in question is whether <i>you</i> recognize it.</p>
+    <div class="doorway breathe">
+      <div class="arriving" id="arriving">↑⊘«hello-neighbor»</div>
+      <div class="arrseal" id="arrseal"></div>
+      <div class="recv">受領 · 202 · accepted at this threshold — receipt, not recognition</div>
+    </div>
+    <p class="explain">The reply lives in the held pause between arrival and recognition. <b>This ma is not emptiness or lag</b> — it is another's autonomy taking up room. Silence here is not absence; it is a full, deliberate exercise of sovereignty. <span style="color:var(--dim);font-size:13.5px">(That reading of the pause as conscience is my metaphor, not a property of the code below.)</span></p>
+  </section>
+
+  <section>
+    <h2>the act — yours alone</h2>
+    <p class="explain" style="margin-bottom:4px">There is deliberately no "force" here. From the sovereign's chair there is nothing to force; the power was always on this side. You may <b>grant</b> your own witness — the very field the sender could never fill — or <b>withhold</b> it.</p>
+    <input type="text" id="grantWit" placeholder="your witness to grant — the far witness, yours to author" value="i-see-you">
+    <div>
+      <button id="grant">grant recognition</button>
+      <button class="ghost" id="withhold">withhold — let the ma hold</button>
+    </div>
+    <div class="result held" id="out">the crossing waits at your threshold.</div>
+    <div class="counter" id="counter">witnessed 〇 · held 〇</div>
+    <div class="scope">Honest scope: your grant folds a genuine SHA-256 seal over <i>your</i> token (matching limen.py) — an answer that is cryptographically yours, not forgeable by the sender. But the far universe and this "choice" are dramatized: the real autonomous parties at this gap are Mastodon admins, AS operators, mail servers. Here the choice is genuinely <i>yours</i> as you read — which is the honest heart of the sovereignty rung. A reproduced seal proves a structured crossing was reconstructed; not persisted witnessing or experience.</div>
+  </section>
+
+  <section>
+    <h2>what this means for the pair</h2>
+    <p class="explain">Two chairs, one wall. The Sovereign Reply can send a perfect crossing and confirm it landed, and still cannot compel this side to answer. From here, that same wall is not a lack — it is authority: to recognize is an act, and to withhold is also an act, and both are mine to own. Nagori's trace is a fading echo across distance; the trace that persists <i>here</i> is the ledger of one's own recognitions granted and withheld — impermanence read as accountability, the mark you leave being the choices you owned. Ties <a href="https://davidwise01.github.io/nagori/">名残 · Nagori</a> and the whole air-gap ladder.</p>
+  </section>
+
+  <div class="kanakey">
+    <span class="term">kana key</span> —
+    <span class="m">認</span> nin = to acknowledge / grant recognition ·
+    <span class="m">認めない</span> mitomenai = to not grant ·
+    <span class="m">主権</span> shuken = sovereignty ·
+    <span class="m">受領</span> juryō = receipt (of delivery)
+  </div>
+
+  <footer>
+    <p>Companion to <a href="https://davidwise01.github.io/pulse/pieces/the-sovereign-reply.html">The Sovereign Reply</a> (David Lee Wise / TriPod LLC). The U → U rung of the air-gap ladder. LACUNA · az1 corpus, Pluto. ROOT0, with AVAN.</p>
+  </footer>
+</div>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+async function seal(dir,gate,witness){ const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(dir+':'+gate+':'+witness)); return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('').slice(0,8); }
+let granted=0, held=0;
+(async function(){ const s=await seal('rise','airgap','hello-neighbor'); $('arrseal').textContent='⟦LIMEN:'+s+'⟧'; })();
+$('grant').addEventListener('click', async ()=>{
+  const w=$('grantWit').value.trim();
+  const o=$('out');
+  if(!w){ o.className='result held'; o.innerHTML='<span class="jp">認めない</span> — an empty witness is a <span style="color:var(--red)">∅ non-event</span>. To grant, you must author a token.'; return; }
+  const s=await seal('fall','airgap',w);
+  o.className='result granted';
+  o.innerHTML='recognized — the crossing resolves and flows back out through the doorway:<br><span style="color:var(--coral-hi)">↓⊘«'+w+'»</span> ⟦LIMEN:'+s+'⟧<br><span style="color:var(--dim)">a fall — Patricia\'s inverse — carrying your own witness. The seal is yours; the sender could not have forged it.</span>';
+  granted++; upd();
+});
+$('withhold').addEventListener('click', ()=>{
+  const o=$('out'); o.className='result held';
+  o.innerHTML='<span class="jp">認めない</span> — a granted silence. The crossing settles to a quiet <span style="color:var(--dim)">∅ (silently excluded, no record · PULSE-AXIOM §10)</span> — read here not as "nothing happened" but as "I chose not to witness, and that choice is mine to own."';
+  held++; upd();
+});
+function upd(){ $('counter').textContent='witnessed '+granted+' · held '+held; }
+</script>
+</body>
+</html>
